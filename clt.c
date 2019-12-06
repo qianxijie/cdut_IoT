@@ -10,21 +10,14 @@
  *
  ================================================================*/
 #include<stdio.h>
-
-#include<stdio.h>
 #include <sys/types.h>          /* See NOTES */
-#include <sys/socket.h>
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <netinet/ip.h> /* superset of previous */
 #include <sys/types.h>          /* See NOTES */
-#include <sys/socket.h>
 #include <string.h>
-#include <sys/socket.h>
 #include <netinet/in.h>
 #include <arpa/inet.h>
-#include <sys/types.h>          /* See NOTES */
-#include <sys/socket.h>
 #include <unistd.h>
 int main()
 {
@@ -43,7 +36,7 @@ int main()
 
 	servaddr.sin_family = PF_INET;
 	servaddr.sin_port = htons(8888);//要连接的服务器端口号
-	servaddr.sin_addr.s_addr = inet_addr("192.168.4.106");//要连接的服务器ip
+	servaddr.sin_addr.s_addr = inet_addr("0");//要连接的服务器ip
 		//连接通信
 		ret = connect(connectfd,(struct sockaddr *)&servaddr,sizeof(servaddr));
 	if(-1 == ret)
